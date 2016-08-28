@@ -20,8 +20,8 @@ String test  = "<Name id=\"test\" class=\"test\">\n</Name>";
 		element.appendText("test Text");
 		assertEquals("test Text",element.getInnerText());
 		element2.setName("name2");
-		element2.setAtrribute("id", "test");
-		element2.setAtrribute("class", "test");
+		element2.setAtrribute("id", "test2");
+		element2.setAtrribute("class", "test2");
 		element.appendInnerHTMLElement(element2);
 		System.out.println(element.toString());
 		

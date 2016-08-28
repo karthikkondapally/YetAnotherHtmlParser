@@ -8,6 +8,8 @@ import elements.HTMLElement;
 
 public class HTMLElementTest {
 HTMLElement element = new HTMLElement();
+HTMLElement element2 = new HTMLElement();
+
 String test  = "<Name id=\"test\" class=\"test\">\n</Name>";
 	@Test
 	public void test() {
@@ -17,6 +19,12 @@ String test  = "<Name id=\"test\" class=\"test\">\n</Name>";
 		assertEquals(test, element.toString());
 		element.appendText("test Text");
 		assertEquals("test Text",element.getInnerText());
+		element2.setName("name2");
+		element2.setAtrribute("id", "test");
+		element2.setAtrribute("class", "test");
+		element.appendInnerHTMLElement(element2);
+		System.out.println(element.toString());
+		
 	}
 
 }

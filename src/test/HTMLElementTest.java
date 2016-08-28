@@ -15,6 +15,8 @@ String test  = "<Name id=\"test\" class=\"test\">\n</Name>";
 		element.setAtrribute("id", "test");
 		element.setAtrribute("class", "test");
 		assertEquals(test, element.toString());
+		element.appendText("test Text");
+		assertEquals("test Text",element.getInnerText());
 	}
 
 }

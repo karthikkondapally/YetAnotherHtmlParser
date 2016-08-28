@@ -63,9 +63,22 @@ public class HTMLElement implements Element {
 		listOfChildNodes.add(innerHTMLElement);
 	}
 	
-	public  HTMLElement getInnerHTMLElement() {
-		return innerHTMLElement;
+	public  ListofChildNodes<Object> getInnerHTMLElement() {
+		return listOfChildNodes;
 	}
+	
+	public String getInnerText(){
+		StringBuilder sb = new StringBuilder();
+		if(listOfChildNodes!=null)
+			for(Object node : listOfChildNodes){
+				if(node instanceof String){
+					sb.append(node);
+				}
+			}
+			return sb.toString() ;		
+	}
+	
+	
 		
 	@Override
 	public String toString(){
